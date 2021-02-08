@@ -1,0 +1,33 @@
+cabal-version: 2.2
+name: lucid-carbon-tooling
+version: 0.1.0
+build-type: Simple
+
+library
+  hs-source-dirs: src
+  exposed-modules: Lucid.Carbon.Tooling
+  default-language: Haskell2010
+  ghc-options: -Wall
+               -Wcompat
+               -Wincomplete-record-updates
+               -Wincomplete-uni-patterns
+               -Wredundant-constraints
+               -Wno-missing-signatures
+  build-depends: aeson
+               , base
+               , bytestring
+               , text
+              
+executable icons
+  hs-source-dirs: bin
+  main-is: GenerateIcons.hs
+  default-language: Haskell2010
+  build-depends: base
+               , lucid-carbon-tooling
+
+executable pictograms
+  hs-source-dirs: bin
+  main-is: GeneratePictograms.hs
+  default-language: Haskell2010
+  build-depends: base
+               , lucid-carbon-tooling

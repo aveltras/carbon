@@ -1,3 +1,18 @@
 cradle:
-  cabal:
-    component: "lib:lucid-carbon"
+  multi:
+    - path: "./lucid-carbon"
+      config: { cradle: { cabal: { component: "lib:lucid-carbon" } } }
+    - path: "./lucid-carbon-icons"
+      config: { cradle: { cabal: { component: "lib:lucid-carbon-icons" } } }
+    - path: "./lucid-carbon-pictograms"
+      config: { cradle: { cabal: { component: "lib:lucid-carbon-pictograms" } } }
+    - path: "./lucid-carbon-tooling"
+      config:
+        cradle:
+          cabal: 
+            - path: "./lucid-carbon-tooling/src"
+              component: "lib:lucid-carbon-tooling"
+            - path: "./lucid-carbon-tooling/bin/GenerateIcons.hs"
+              component: "lucid-carbon-tooling:exe:icons"
+            - path: "./lucid-carbon-tooling/bin/GeneratePictograms.hs"
+              component: "lucid-carbon-tooling:exe:pictograms"

@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@carbon/icons": "^10.25.0",
+    "@carbon/pictograms": "^11.2.0"
+  }
+}

@@ -1,3 +1,4 @@
 .direnv/
 dist-newstyle/
+node_modules/
 cabal.project.local

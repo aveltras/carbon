@@ -14,6 +14,9 @@
 }).shellFor {
   packages = ps: with ps; [
     lucid-carbon
+    lucid-carbon-icons
+    lucid-carbon-pictograms
+    lucid-carbon-tooling
   ];
   
   withHoogle = false;
@@ -24,4 +27,8 @@
     haskell-language-server = "latest";
     ghcid = "latest";
   };
+
+  buildInputs = with pkgs; [
+    nodejs
+  ];
 }
