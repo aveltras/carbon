@@ -1,0 +1,50 @@
+cabal-version: 2.2
+name: examples
+version: 0.1.0
+build-type: Simple
+
+library
+  hs-source-dirs: lib
+  exposed-modules: Lib
+  default-language: Haskell2010
+  ghc-options: -Wall
+               -Wcompat
+               -Wincomplete-record-updates
+               -Wincomplete-uni-patterns
+               -Wredundant-constraints
+               -Wno-missing-signatures
+  build-depends: base
+               , bytestring
+               , http-types
+               , text
+               , wai
+               , wai-middleware-static
+               , warp
+  
+executable lucid
+  hs-source-dirs: with-lucid
+  main-is: Main.hs
+  default-language: Haskell2010
+  build-depends: base
+               , examples
+               , carbon-lucid
+               , carbon-icons
+               , carbon-pictograms
+               , carbon-svg
+               , lucid
+               , lucid-svg
+               , text
+
+executable blaze-html
+  hs-source-dirs: with-blaze-html
+  main-is: Main.hs
+  default-language: Haskell2010
+  build-depends: base
+               , examples
+               , blaze-html
+               , blaze-svg
+               , carbon-blaze-html
+               , carbon-icons
+               , carbon-pictograms
+               , carbon-svg
+               , text

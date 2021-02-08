@@ -24,3 +24,13 @@ cradle:
               component: "carbon-tools:exe:lucid"
             - path: "./carbon-tools/bin/GenerateBlaze.hs"
               component: "carbon-tools:exe:blaze"
+    - path: "./examples"
+      config:
+        cradle:
+          cabal: 
+            - path: "./examples/lib"
+              component: "lib:examples"
+            - path: "./examples/with-lucid"
+              component: "examples:exe:lucid"
+            - path: "./examples/with-blaze-html"
+              component: "examples:exe:blaze-html"

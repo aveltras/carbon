@@ -17,6 +17,7 @@
     carbon-lucid
     carbon-svg
     carbon-tools
+    examples
   ];
   
   withHoogle = false;

@@ -39,7 +39,7 @@ generateContent contentType moduleNameBuilder = do
         \{-# LANGUAGE OverloadedStrings #-}\n\n\
         \module Carbon."
           <> moduleName
-          <> " where\n\n"
+          <> " (module Exports) where\n\n"
 
       writeFile cabalFile $ unpack $ cabalTemplate (pack contentType) (pack moduleName)
 
@@ -48,7 +48,7 @@ generateContent contentType moduleNameBuilder = do
             svgModuleName = singular <> moduleNameBuilder (svgName $ head svgs)
 
         writeFile (svgFile svgModuleName) $ unpack $ svgFileHeader (pack moduleName) (pack svgModuleName)
-        appendFile file $ "import Carbon." <> moduleName <> "." <> svgModuleName <> "\n"
+        appendFile file $ "import Carbon." <> moduleName <> "." <> svgModuleName <> " as Exports\n"
         appendFile cabalFile $ "\n    Carbon." <> moduleName <> "." <> svgModuleName
 
         forM_ svgs $ \svg@Svg {..} -> do
