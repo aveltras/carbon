@@ -1,0 +1,16 @@
+cabal-version: 2.2
+name: carbon-svg
+version: 0.1.0
+build-type: Simple
+
+library
+  hs-source-dirs: src
+  exposed-modules: Carbon.Svg
+  default-language: Haskell2010
+  build-depends: base
+  ghc-options: -Wall
+               -Wcompat
+               -Wincomplete-record-updates
+               -Wincomplete-uni-patterns
+               -Wredundant-constraints
+               -Wno-missing-signatures

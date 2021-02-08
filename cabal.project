@@ -1,5 +1,6 @@
 packages:
-  lucid-carbon/
-  lucid-carbon-icons/
-  lucid-carbon-pictograms/
-  lucid-carbon-tooling/
+  carbon-icons/
+  carbon-lucid/
+  carbon-pictograms/
+  carbon-svg/
+  carbon-tools/

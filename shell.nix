@@ -13,10 +13,9 @@
   };
 }).shellFor {
   packages = ps: with ps; [
-    lucid-carbon
-    lucid-carbon-icons
-    lucid-carbon-pictograms
-    lucid-carbon-tooling
+    carbon-lucid
+    carbon-svg
+    carbon-tools
   ];
   
   withHoogle = false;

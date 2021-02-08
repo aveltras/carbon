@@ -1,0 +1,17 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Carbon.Icons.IconStoragePool where
+
+import Carbon.Svg
+
+iconStoragePool32 :: Svg
+iconStoragePool32 = Svg {svgName = "StoragePool32", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "32.0", svgHeight = "32.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28,30H4a2.0021,2.0021,0,0,1-2-2V4A2.0021,2.0021,0,0,1,4,2H28a2.0021,2.0021,0,0,1,2,2V28A2.0021,2.0021,0,0,1,28,30ZM4,4V28H28V4Z"}),SvgElementPath (SvgPath {svgPathD = "M17.5 13A3.5 3.5 0 1121 9.5 3.5041 3.5041 0 0117.5 13zm0-5A1.5 1.5 0 1019 9.5 1.5017 1.5017 0 0017.5 8zM14.5 26A3.5 3.5 0 1118 22.5 3.5041 3.5041 0 0114.5 26zm0-5A1.5 1.5 0 1016 22.5 1.5017 1.5017 0 0014.5 21zM9.5 18A3.5 3.5 0 1113 14.5 3.5041 3.5041 0 019.5 18zm0-5A1.5 1.5 0 1011 14.5 1.5017 1.5017 0 009.5 13zM22.5 21A3.5 3.5 0 1126 17.5 3.5041 3.5041 0 0122.5 21zm0-5A1.5 1.5 0 1024 17.5 1.5017 1.5017 0 0022.5 16z"})]}
+
+iconStoragePool24 :: Svg
+iconStoragePool24 = Svg {svgName = "StoragePool24", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "24.0", svgHeight = "24.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28,30H4a2.0021,2.0021,0,0,1-2-2V4A2.0021,2.0021,0,0,1,4,2H28a2.0021,2.0021,0,0,1,2,2V28A2.0021,2.0021,0,0,1,28,30ZM4,4V28H28V4Z"}),SvgElementPath (SvgPath {svgPathD = "M17.5 13A3.5 3.5 0 1121 9.5 3.5041 3.5041 0 0117.5 13zm0-5A1.5 1.5 0 1019 9.5 1.5017 1.5017 0 0017.5 8zM14.5 26A3.5 3.5 0 1118 22.5 3.5041 3.5041 0 0114.5 26zm0-5A1.5 1.5 0 1016 22.5 1.5017 1.5017 0 0014.5 21zM9.5 18A3.5 3.5 0 1113 14.5 3.5041 3.5041 0 019.5 18zm0-5A1.5 1.5 0 1011 14.5 1.5017 1.5017 0 009.5 13zM22.5 21A3.5 3.5 0 1126 17.5 3.5041 3.5041 0 0122.5 21zm0-5A1.5 1.5 0 1024 17.5 1.5017 1.5017 0 0022.5 16z"})]}
+
+iconStoragePool20 :: Svg
+iconStoragePool20 = Svg {svgName = "StoragePool20", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "20.0", svgHeight = "20.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28,30H4a2.0021,2.0021,0,0,1-2-2V4A2.0021,2.0021,0,0,1,4,2H28a2.0021,2.0021,0,0,1,2,2V28A2.0021,2.0021,0,0,1,28,30ZM4,4V28H28V4Z"}),SvgElementPath (SvgPath {svgPathD = "M17.5 13A3.5 3.5 0 1121 9.5 3.5041 3.5041 0 0117.5 13zm0-5A1.5 1.5 0 1019 9.5 1.5017 1.5017 0 0017.5 8zM14.5 26A3.5 3.5 0 1118 22.5 3.5041 3.5041 0 0114.5 26zm0-5A1.5 1.5 0 1016 22.5 1.5017 1.5017 0 0014.5 21zM9.5 18A3.5 3.5 0 1113 14.5 3.5041 3.5041 0 019.5 18zm0-5A1.5 1.5 0 1011 14.5 1.5017 1.5017 0 009.5 13zM22.5 21A3.5 3.5 0 1126 17.5 3.5041 3.5041 0 0122.5 21zm0-5A1.5 1.5 0 1024 17.5 1.5017 1.5017 0 0022.5 16z"})]}
+
+iconStoragePool16 :: Svg
+iconStoragePool16 = Svg {svgName = "StoragePool16", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "16.0", svgHeight = "16.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28,30H4a2.0021,2.0021,0,0,1-2-2V4A2.0021,2.0021,0,0,1,4,2H28a2.0021,2.0021,0,0,1,2,2V28A2.0021,2.0021,0,0,1,28,30ZM4,4V28H28V4Z"}),SvgElementPath (SvgPath {svgPathD = "M17.5 13A3.5 3.5 0 1121 9.5 3.5041 3.5041 0 0117.5 13zm0-5A1.5 1.5 0 1019 9.5 1.5017 1.5017 0 0017.5 8zM14.5 26A3.5 3.5 0 1118 22.5 3.5041 3.5041 0 0114.5 26zm0-5A1.5 1.5 0 1016 22.5 1.5017 1.5017 0 0014.5 21zM9.5 18A3.5 3.5 0 1113 14.5 3.5041 3.5041 0 019.5 18zm0-5A1.5 1.5 0 1011 14.5 1.5017 1.5017 0 009.5 13zM22.5 21A3.5 3.5 0 1126 17.5 3.5041 3.5041 0 0122.5 21zm0-5A1.5 1.5 0 1024 17.5 1.5017 1.5017 0 0022.5 16z"})]}

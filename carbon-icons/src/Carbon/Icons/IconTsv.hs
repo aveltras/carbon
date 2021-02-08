@@ -1,0 +1,17 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Carbon.Icons.IconTsv where
+
+import Carbon.Svg
+
+iconTsv32 :: Svg
+iconTsv32 = Svg {svgName = "Tsv32", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "32.0", svgHeight = "32.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28 9L26 22 24 9 22 9 24.516 23 27.484 23 30 9 28 9zM18 23H12V21h6V17H14a2.002 2.002 0 01-2-2V11a2.002 2.002 0 012-2h6v2H14v4h4a2.002 2.002 0 012 2v4A2.002 2.002 0 0118 23zM2 11L5 11 5 23 7 23 7 11 10 11 10 9 2 9 2 11z"})]}
+
+iconTsv24 :: Svg
+iconTsv24 = Svg {svgName = "Tsv24", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "24.0", svgHeight = "24.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28 9L26 22 24 9 22 9 24.516 23 27.484 23 30 9 28 9zM18 23H12V21h6V17H14a2.002 2.002 0 01-2-2V11a2.002 2.002 0 012-2h6v2H14v4h4a2.002 2.002 0 012 2v4A2.002 2.002 0 0118 23zM2 11L5 11 5 23 7 23 7 11 10 11 10 9 2 9 2 11z"})]}
+
+iconTsv20 :: Svg
+iconTsv20 = Svg {svgName = "Tsv20", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "20.0", svgHeight = "20.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28 9L26 22 24 9 22 9 24.516 23 27.484 23 30 9 28 9zM18 23H12V21h6V17H14a2.002 2.002 0 01-2-2V11a2.002 2.002 0 012-2h6v2H14v4h4a2.002 2.002 0 012 2v4A2.002 2.002 0 0118 23zM2 11L5 11 5 23 7 23 7 11 10 11 10 9 2 9 2 11z"})]}
+
+iconTsv16 :: Svg
+iconTsv16 = Svg {svgName = "Tsv16", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "16.0", svgHeight = "16.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M28 9L26 22 24 9 22 9 24.516 23 27.484 23 30 9 28 9zM18 23H12V21h6V17H14a2.002 2.002 0 01-2-2V11a2.002 2.002 0 012-2h6v2H14v4h4a2.002 2.002 0 012 2v4A2.002 2.002 0 0118 23zM2 11L5 11 5 23 7 23 7 11 10 11 10 9 2 9 2 11z"})]}

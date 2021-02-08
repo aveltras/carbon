@@ -1,5 +1,7 @@
 cradle:
   multi:
+    - path: "./carbon-svg"
+      config: { cradle: { cabal: { component: "lib:carbon-svg" } } }
     - path: "./lucid-carbon"
       config: { cradle: { cabal: { component: "lib:lucid-carbon" } } }
     - path: "./lucid-carbon-icons"

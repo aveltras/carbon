@@ -1,0 +1,17 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Carbon.Icons.IconAugmentedReality where
+
+import Carbon.Svg
+
+iconAugmentedReality32 :: Svg
+iconAugmentedReality32 = Svg {svgName = "AugmentedReality32", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "32.0", svgHeight = "32.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M27.4473,9.1055l-6-3a1.0008,1.0008,0,0,0-.8946,0l-6,3A1,1,0,0,0,14,10v7a1,1,0,0,0,.5527.8945l6,3a1.001,1.001,0,0,0,.8946,0l6-3A1,1,0,0,0,28,17V10A1,1,0,0,0,27.4473,9.1055ZM21,8.1182,24.7637,10,21,11.8818,17.2363,10Zm-5,3.5,4,2v4.7636l-4-2Zm6,6.7636V13.6182l4-2v4.7636Z"}),SvgElementCircle (SvgCircle {svgCircleX = "13.5", svgCircleY = "24.5", svgCircleRadius = "1.5"}),SvgElementPath (SvgPath {svgPathD = "M20,30H7a2.0023,2.0023,0,0,1-2-2V4A2.0023,2.0023,0,0,1,7,2H20V4H7V28H20V24h2v4A2.0023,2.0023,0,0,1,20,30Z"})]}
+
+iconAugmentedReality24 :: Svg
+iconAugmentedReality24 = Svg {svgName = "AugmentedReality24", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "24.0", svgHeight = "24.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M27.4473,9.1055l-6-3a1.0008,1.0008,0,0,0-.8946,0l-6,3A1,1,0,0,0,14,10v7a1,1,0,0,0,.5527.8945l6,3a1.001,1.001,0,0,0,.8946,0l6-3A1,1,0,0,0,28,17V10A1,1,0,0,0,27.4473,9.1055ZM21,8.1182,24.7637,10,21,11.8818,17.2363,10Zm-5,3.5,4,2v4.7636l-4-2Zm6,6.7636V13.6182l4-2v4.7636Z"}),SvgElementCircle (SvgCircle {svgCircleX = "13.5", svgCircleY = "24.5", svgCircleRadius = "1.5"}),SvgElementPath (SvgPath {svgPathD = "M20,30H7a2.0023,2.0023,0,0,1-2-2V4A2.0023,2.0023,0,0,1,7,2H20V4H7V28H20V24h2v4A2.0023,2.0023,0,0,1,20,30Z"})]}
+
+iconAugmentedReality20 :: Svg
+iconAugmentedReality20 = Svg {svgName = "AugmentedReality20", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "20.0", svgHeight = "20.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M27.4473,9.1055l-6-3a1.0008,1.0008,0,0,0-.8946,0l-6,3A1,1,0,0,0,14,10v7a1,1,0,0,0,.5527.8945l6,3a1.001,1.001,0,0,0,.8946,0l6-3A1,1,0,0,0,28,17V10A1,1,0,0,0,27.4473,9.1055ZM21,8.1182,24.7637,10,21,11.8818,17.2363,10Zm-5,3.5,4,2v4.7636l-4-2Zm6,6.7636V13.6182l4-2v4.7636Z"}),SvgElementCircle (SvgCircle {svgCircleX = "13.5", svgCircleY = "24.5", svgCircleRadius = "1.5"}),SvgElementPath (SvgPath {svgPathD = "M20,30H7a2.0023,2.0023,0,0,1-2-2V4A2.0023,2.0023,0,0,1,7,2H20V4H7V28H20V24h2v4A2.0023,2.0023,0,0,1,20,30Z"})]}
+
+iconAugmentedReality16 :: Svg
+iconAugmentedReality16 = Svg {svgName = "AugmentedReality16", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "16.0", svgHeight = "16.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M27.4473,9.1055l-6-3a1.0008,1.0008,0,0,0-.8946,0l-6,3A1,1,0,0,0,14,10v7a1,1,0,0,0,.5527.8945l6,3a1.001,1.001,0,0,0,.8946,0l6-3A1,1,0,0,0,28,17V10A1,1,0,0,0,27.4473,9.1055ZM21,8.1182,24.7637,10,21,11.8818,17.2363,10Zm-5,3.5,4,2v4.7636l-4-2Zm6,6.7636V13.6182l4-2v4.7636Z"}),SvgElementCircle (SvgCircle {svgCircleX = "13.5", svgCircleY = "24.5", svgCircleRadius = "1.5"}),SvgElementPath (SvgPath {svgPathD = "M20,30H7a2.0023,2.0023,0,0,1-2-2V4A2.0023,2.0023,0,0,1,7,2H20V4H7V28H20V24h2v4A2.0023,2.0023,0,0,1,20,30Z"})]}

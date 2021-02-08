@@ -1,0 +1,17 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Carbon.Icons.IconCategories where
+
+import Carbon.Svg
+
+iconCategories32 :: Svg
+iconCategories32 = Svg {svgName = "Categories32", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "32.0", svgHeight = "32.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M6.76 6l.45.89L7.76 8H12v5H4V6H6.76m.62-2H3A1 1 0 002 5v9a1 1 0 001 1H13a1 1 0 001-1V7a1 1 0 00-1-1H9L8.28 4.55A1 1 0 007.38 4zM22.76 6l.45.89L23.76 8H28v5H20V6h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V7a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55zM6.76 19l.45.89L7.76 21H12v5H4V19H6.76m.62-2H3a1 1 0 00-1 1v9a1 1 0 001 1H13a1 1 0 001-1V20a1 1 0 00-1-1H9l-.72-1.45a1 1 0 00-.9-.55zM22.76 19l.45.89L23.76 21H28v5H20V19h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V20a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55z"})]}
+
+iconCategories24 :: Svg
+iconCategories24 = Svg {svgName = "Categories24", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "24.0", svgHeight = "24.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M6.76 6l.45.89L7.76 8H12v5H4V6H6.76m.62-2H3A1 1 0 002 5v9a1 1 0 001 1H13a1 1 0 001-1V7a1 1 0 00-1-1H9L8.28 4.55A1 1 0 007.38 4zM22.76 6l.45.89L23.76 8H28v5H20V6h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V7a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55zM6.76 19l.45.89L7.76 21H12v5H4V19H6.76m.62-2H3a1 1 0 00-1 1v9a1 1 0 001 1H13a1 1 0 001-1V20a1 1 0 00-1-1H9l-.72-1.45a1 1 0 00-.9-.55zM22.76 19l.45.89L23.76 21H28v5H20V19h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V20a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55z"})]}
+
+iconCategories20 :: Svg
+iconCategories20 = Svg {svgName = "Categories20", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "20.0", svgHeight = "20.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M6.76 6l.45.89L7.76 8H12v5H4V6H6.76m.62-2H3A1 1 0 002 5v9a1 1 0 001 1H13a1 1 0 001-1V7a1 1 0 00-1-1H9L8.28 4.55A1 1 0 007.38 4zM22.76 6l.45.89L23.76 8H28v5H20V6h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V7a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55zM6.76 19l.45.89L7.76 21H12v5H4V19H6.76m.62-2H3a1 1 0 00-1 1v9a1 1 0 001 1H13a1 1 0 001-1V20a1 1 0 00-1-1H9l-.72-1.45a1 1 0 00-.9-.55zM22.76 19l.45.89L23.76 21H28v5H20V19h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V20a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55z"})]}
+
+iconCategories16 :: Svg
+iconCategories16 = Svg {svgName = "Categories16", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "16.0", svgHeight = "16.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M6.76 6l.45.89L7.76 8H12v5H4V6H6.76m.62-2H3A1 1 0 002 5v9a1 1 0 001 1H13a1 1 0 001-1V7a1 1 0 00-1-1H9L8.28 4.55A1 1 0 007.38 4zM22.76 6l.45.89L23.76 8H28v5H20V6h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V7a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55zM6.76 19l.45.89L7.76 21H12v5H4V19H6.76m.62-2H3a1 1 0 00-1 1v9a1 1 0 001 1H13a1 1 0 001-1V20a1 1 0 00-1-1H9l-.72-1.45a1 1 0 00-.9-.55zM22.76 19l.45.89L23.76 21H28v5H20V19h2.76m.62-2H19a1 1 0 00-1 1v9a1 1 0 001 1H29a1 1 0 001-1V20a1 1 0 00-1-1H25l-.72-1.45a1 1 0 00-.9-.55z"})]}

@@ -1,0 +1,17 @@
+{-# LANGUAGE OverloadedStrings #-}
+
+module Carbon.Icons.IconWatsonHealthWindowAuto where
+
+import Carbon.Svg
+
+iconWatsonHealthWindowAuto32 :: Svg
+iconWatsonHealthWindowAuto32 = Svg {svgName = "WatsonHealthWindowAuto32", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "32.0", svgHeight = "32.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M15 4H17V7H15zM25 15H28V17H25zM15 25H17V28H15zM4 15H7V17H4z"}),SvgElementPath (SvgPath {svgPathD = "M7.55 7.04H9.55V10.04H7.55z"}),SvgElementPath (SvgPath {svgPathD = "M21.96 7.55H24.96V9.55H21.96z"}),SvgElementPath (SvgPath {svgPathD = "M22.45 21.95H24.45V24.95H22.45z"}),SvgElementPath (SvgPath {svgPathD = "M7.05 22.45H10.05V24.45H7.05z"}),SvgElementPath (SvgPath {svgPathD = "M4 30H28V32H4zM4 0H28V2H4zM16 10a6 6 0 106 6A6 6 0 0016 10zm-4 6a4 4 0 014-4v8A4 4 0 0112 16z"})]}
+
+iconWatsonHealthWindowAuto24 :: Svg
+iconWatsonHealthWindowAuto24 = Svg {svgName = "WatsonHealthWindowAuto24", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "24.0", svgHeight = "24.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M15 4H17V7H15zM25 15H28V17H25zM15 25H17V28H15zM4 15H7V17H4z"}),SvgElementPath (SvgPath {svgPathD = "M7.55 7.04H9.55V10.04H7.55z"}),SvgElementPath (SvgPath {svgPathD = "M21.96 7.55H24.96V9.55H21.96z"}),SvgElementPath (SvgPath {svgPathD = "M22.45 21.95H24.45V24.95H22.45z"}),SvgElementPath (SvgPath {svgPathD = "M7.05 22.45H10.05V24.45H7.05z"}),SvgElementPath (SvgPath {svgPathD = "M4 30H28V32H4zM4 0H28V2H4zM16 10a6 6 0 106 6A6 6 0 0016 10zm-4 6a4 4 0 014-4v8A4 4 0 0112 16z"})]}
+
+iconWatsonHealthWindowAuto20 :: Svg
+iconWatsonHealthWindowAuto20 = Svg {svgName = "WatsonHealthWindowAuto20", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "20.0", svgHeight = "20.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M15 4H17V7H15zM25 15H28V17H25zM15 25H17V28H15zM4 15H7V17H4z"}),SvgElementPath (SvgPath {svgPathD = "M7.55 7.04H9.55V10.04H7.55z"}),SvgElementPath (SvgPath {svgPathD = "M21.96 7.55H24.96V9.55H21.96z"}),SvgElementPath (SvgPath {svgPathD = "M22.45 21.95H24.45V24.95H22.45z"}),SvgElementPath (SvgPath {svgPathD = "M7.05 22.45H10.05V24.45H7.05z"}),SvgElementPath (SvgPath {svgPathD = "M4 30H28V32H4zM4 0H28V2H4zM16 10a6 6 0 106 6A6 6 0 0016 10zm-4 6a4 4 0 014-4v8A4 4 0 0112 16z"})]}
+
+iconWatsonHealthWindowAuto16 :: Svg
+iconWatsonHealthWindowAuto16 = Svg {svgName = "WatsonHealthWindowAuto16", svgNamespace = "http://www.w3.org/2000/svg", svgViewBox = "0 0 32 32", svgFill = "currentColor", svgWidth = "16.0", svgHeight = "16.0", svgContent = [SvgElementPath (SvgPath {svgPathD = "M15 4H17V7H15zM25 15H28V17H25zM15 25H17V28H15zM4 15H7V17H4z"}),SvgElementPath (SvgPath {svgPathD = "M7.55 7.04H9.55V10.04H7.55z"}),SvgElementPath (SvgPath {svgPathD = "M21.96 7.55H24.96V9.55H21.96z"}),SvgElementPath (SvgPath {svgPathD = "M22.45 21.95H24.45V24.95H22.45z"}),SvgElementPath (SvgPath {svgPathD = "M7.05 22.45H10.05V24.45H7.05z"}),SvgElementPath (SvgPath {svgPathD = "M4 30H28V32H4zM4 0H28V2H4zM16 10a6 6 0 106 6A6 6 0 0016 10zm-4 6a4 4 0 014-4v8A4 4 0 0112 16z"})]}
