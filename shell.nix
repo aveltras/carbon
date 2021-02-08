@@ -8,7 +8,7 @@
   compiler-nix-name = "ghc8103";
   # index-state = "2021-01-19T00:00:00Z";
   src = pkgs.haskell-nix.haskellLib.cleanGit {
-    name = "lucid-carbon";
+    name = "carbon";
     src = ./.;
   };
 }).shellFor {

@@ -6,12 +6,10 @@ cradle:
       config: { cradle: { cabal: { component: "lib:carbon-lucid" } } }
     - path: "./carbon-svg"
       config: { cradle: { cabal: { component: "lib:carbon-svg" } } }
-    - path: "./lucid-carbon"
-      config: { cradle: { cabal: { component: "lib:lucid-carbon" } } }
-    - path: "./lucid-carbon-icons"
-      config: { cradle: { cabal: { component: "lib:lucid-carbon-icons" } } }
-    - path: "./lucid-carbon-pictograms"
-      config: { cradle: { cabal: { component: "lib:lucid-carbon-pictograms" } } }
+    - path: "./carbon-icons"
+      config: { cradle: { cabal: { component: "lib:carbon-icons" } } }
+    - path: "./carbon-pictograms"
+      config: { cradle: { cabal: { component: "lib:carbon-pictograms" } } }
     - path: "./carbon-tools"
       config:
         cradle:
