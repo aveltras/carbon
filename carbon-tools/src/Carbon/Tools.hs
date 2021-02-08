@@ -28,7 +28,6 @@ generateContent contentType moduleNameBuilder = do
       prefix = init contentType
 
   fileContent <- BL.readFile $ "../node_modules/@carbon/" <> contentType <> "/metadata.json"
-  -- fileContent <- BL.readFile $ "../test.json"
 
   case eitherDecode fileContent of
     Left err -> error err
@@ -55,17 +54,8 @@ generateContent contentType moduleNameBuilder = do
               fnName = prefix <> unpack svgName
               typeDef = fnName <> " :: Svg\n"
               bodyDef = fnName <> " = " <> show svg
-          -- svgDef = "svg_ [xmlSpace_ \"" <> svgNamespace <> "\", viewBox_ \"" <> svgViewBox <> "\", fill_ \"" <> svgFill <> "\", width_ \"" <> svgWidth <> "\", height_ \"" <> svgHeight <> "\"] $ do\n"
-          -- contentDef =
-          -- flip fmap svgContent $
-          -- \case
-          -- SvgElementPath item -> lucidShow item
-          -- SvgElementCircle item -> lucidShow item
-          -- SvgElementRect item -> lucidShow item
 
           appendFile (svgFile svgModuleName) $ "\n\n" <> typeDef <> bodyDef
-
--- appendFile file $ "\n\n" <> typeDef <> bodyDef <> "  " <> svgDef <> "    " <> intercalate "\n    " contentDef
 
 newtype Metadata = Metadata [[Svg]]
   deriving (Show)
@@ -153,19 +143,43 @@ svgFileHeader package name =
      import Carbon.Svg
   |]
 
-generateModule :: FilePath -> Text -> String -> (String -> String) -> IO ()
-generateModule moduleFile moduleFileHeader typeDef bodyDef = do
-  writeFile moduleFile $ unpack moduleFileHeader
+data ModuleOpts = ModuleOpts
+  { _moduleOptsFile :: FilePath,
+    _moduleOptsFileHeader :: Text,
+    _moduleOptsTagType :: String,
+    _moduleOptsTagBody :: String -> String,
+    _moduleOptsAttrType :: String,
+    _moduleOptsAttrBody :: String -> String,
+    _moduleOptsAttrFuncName :: String -> String
+  }
+
+generateModule :: ModuleOpts -> IO ()
+generateModule ModuleOpts {..} = do
+  writeFile _moduleOptsFile $ unpack _moduleOptsFileHeader
+
   forM_ tags $ \tag -> do
     let funcName = pack $ toCamel . fromKebab $ tag
-        funcType = pack typeDef
-        funcBody = pack $ bodyDef tag
+        funcType = pack _moduleOptsTagType
+        funcBody = pack $ _moduleOptsTagBody tag
 
-    appendFile moduleFile $
+    appendFile _moduleOptsFile $
       unpack
         [untrimming|${funcName} :: ${funcType}
                     ${funcName} = ${funcBody}
                      |]
+
+  forM_ attributes $ \attr -> do
+    let funcName = pack $ _moduleOptsAttrFuncName . toCamel . fromKebab $ attr
+        funcType = pack $ _moduleOptsAttrType
+        funcBody = pack $ _moduleOptsAttrBody attr
+
+    appendFile _moduleOptsFile $
+      unpack
+        [untrimming|${funcName} :: ${funcType}
+                    ${funcName} = ${funcBody}
+                     |]
+
+    pure ()
 
 tags :: [String]
 tags =
@@ -175,6 +189,7 @@ tags =
     "bx-breadcrumb-item",
     "bx-breadcrumb-link",
     "bx-btn",
+    "bx-btn-skeleton",
     "bx-checkbox",
     "bx-code-snippet",
     "bx-combo-box",
@@ -184,20 +199,27 @@ tags =
     "bx-copy-button",
     "bx-data-table",
     "bx-table",
+    "bx-table-batch-actions",
+    "bx-table-body",
+    "bx-table-cell",
+    "bx-table-cell-skeleton",
+    "bx-table-expand-row",
+    "bx-table-expanded-row",
     "bx-table-head",
+    "bx-table-header-expand-row",
     "bx-table-header-row",
     "bx-table-header-cell",
-    "bx-table-body",
+    "bx-table-header-cell-skeleton",
     "bx-table-row",
-    "bx-table-cell",
     "bx-table-toolbar",
-    "bx-table-batch-actions",
     "bx-table-toolbar-content",
     "bx-table-toolbar-search",
     "bx-date-picker",
     "bx-date-picker-input",
+    "bx-date-picker-input-skeleton",
     "bx-dropdown",
     "bx-dropdown-item",
+    "bx-dropdown-skeleton",
     "bx-file-uploader",
     "bx-file-drop-container",
     "bx-file-uploader-item",
@@ -221,6 +243,7 @@ tags =
     "bx-inline-notification",
     "bx-toast-notification",
     "bx-number-input",
+    "bx-number-input-skeleton",
     "bx-overflow-menu",
     "bx-overflow-menu-body",
     "bx-overflow-menu-item",
@@ -228,10 +251,14 @@ tags =
     "bx-page-sizes-select",
     "bx-pages-select",
     "bx-progress-indicator",
+    "bx-progress-indicator-skeleton",
     "bx-progress-step",
+    "bx-progress-step-skeleton",
     "bx-radio-button",
+    "bx-radio-button-skeleton",
     "bx-radio-button-group",
     "bx-search",
+    "bx-search-skeleton",
     "bx-select",
     "bx-select-item",
     "bx-select-item-group",
@@ -239,6 +266,7 @@ tags =
     "bx-skeleton-text",
     "bx-skip-to-content",
     "bx-slider",
+    "bx-slider-skeleton",
     "bx-slider-input",
     "bx-structured-list",
     "bx-structured-list-head",
@@ -248,10 +276,13 @@ tags =
     "bx-structured-list-row",
     "bx-structured-list-cell",
     "bx-tabs",
+    "bx-tabs-skeleton",
     "bx-tab",
+    "bx-tab-skeleton",
     "bx-tag",
     "bx-filter-tag",
     "bx-textarea",
+    "bx-textarea-skeleton",
     "bx-tile",
     "bx-clickable-tile",
     "bx-expandable-tile",
@@ -276,4 +307,135 @@ tags =
     "bx-side-menu-item",
     "bx-side-nav-link",
     "bx-side-nav-items"
+  ]
+
+attributes :: [String]
+attributes =
+  [ -- "accept",
+    -- "autocomplete",
+    -- "autofocus",
+    -- "caption",
+    -- "checked",
+    -- "cols",
+    -- "colspan",
+    -- "disabled",
+    -- "download",
+    -- "href",
+    -- "hreflang",
+    -- "id",
+    -- "max",
+    -- "min",
+    -- "multiple",
+    -- "name",
+    -- "open",
+    -- "pattern",
+    -- "placeholder",
+    -- "ping",
+    -- "readonly",
+    -- "rel",
+    -- "required",
+    -- "rows",
+    -- "selected",
+    -- "size",
+    -- "start",
+    -- "step",
+    -- "target",
+    -- "title",
+    -- "type",
+    -- "value",
+    "active",
+    "alignment",
+    "at-last-page",
+    "body-text",
+    "button-assistive-text",
+    "button-label-active",
+    "button-label-inactive",
+    "checked-text",
+    "checkmark-label",
+    "clear-selection-label",
+    "close-button-assistive-text",
+    "close-button-label",
+    "code-assistive-text",
+    "collapse-button-text",
+    "collapse-mode",
+    "color-scheme",
+    "container-class",
+    "copy-button-assistive-text",
+    "copy-button-feedback-text",
+    "copy-button-feedback-timeout",
+    "danger",
+    "date-format",
+    "decrement-button-assistive-text",
+    "delete-assistive-text",
+    "direction",
+    "enabled-range",
+    "expand-button-text",
+    "expanded",
+    "feedback-text",
+    "feedback-timeout",
+    "force-collapsed",
+    "has-batch-actions",
+    "helper-text",
+    "hide-close-button",
+    "hide-divider",
+    "hide-label",
+    "highlighted",
+    "icon-label",
+    "icon-layout",
+    "in-focus",
+    "inactive",
+    "increment-button-assistive-text",
+    "indeterminate",
+    "input-label",
+    "invalid",
+    "kind",
+    "label-position",
+    "label-text",
+    "link-assistive-text",
+    "link-role",
+    "menu-bar-label",
+    "menu-label",
+    "mobile",
+    "next-button-text",
+    "nested",
+    "odd",
+    "orientation",
+    "page-size",
+    "page-size-label-text",
+    "prefix",
+    "prev-button-text",
+    "required-validity-message",
+    "secondary-label-text",
+    "selected-rows-count",
+    "selecting-items-assistive-text",
+    "selected-item-assistive-text",
+    "selection-icon-title",
+    "selection-label",
+    "selection-name",
+    "selection-value",
+    "size-horizontal",
+    "slot",
+    "sort",
+    "sort-active",
+    "sort-cycle",
+    "sort-direction",
+    "state",
+    "status",
+    "subtitle",
+    "timeout",
+    "title-text",
+    "toggle-label-closed",
+    "toggle-label-open",
+    "total",
+    "trigger-content",
+    "unchecked-text",
+    "unselected-item-assistive-text",
+    "unselected-all-assistive-text",
+    "uploading-assistive-text",
+    "uploaded-assistive-text",
+    "usage-mode",
+    "validity-message",
+    "validity-message-min",
+    "validity-message-max",
+    "vertical"
   ]

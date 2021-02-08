@@ -23,6 +23,9 @@ bxBreadcrumbLink = Parent "bx-breadcrumb-link" "<bx-breadcrumb-link" "</bx-bread
 bxBtn :: Html -> Html
 bxBtn = Parent "bx-btn" "<bx-btn" "</bx-btn>"
  
+bxBtnSkeleton :: Html -> Html
+bxBtnSkeleton = Parent "bx-btn-skeleton" "<bx-btn-skeleton" "</bx-btn-skeleton>"
+ 
 bxCheckbox :: Html -> Html
 bxCheckbox = Parent "bx-checkbox" "<bx-checkbox" "</bx-checkbox>"
  
@@ -50,8 +53,29 @@ bxDataTable = Parent "bx-data-table" "<bx-data-table" "</bx-data-table>"
 bxTable :: Html -> Html
 bxTable = Parent "bx-table" "<bx-table" "</bx-table>"
  
+bxTableBatchActions :: Html -> Html
+bxTableBatchActions = Parent "bx-table-batch-actions" "<bx-table-batch-actions" "</bx-table-batch-actions>"
+ 
+bxTableBody :: Html -> Html
+bxTableBody = Parent "bx-table-body" "<bx-table-body" "</bx-table-body>"
+ 
+bxTableCell :: Html -> Html
+bxTableCell = Parent "bx-table-cell" "<bx-table-cell" "</bx-table-cell>"
+ 
+bxTableCellSkeleton :: Html -> Html
+bxTableCellSkeleton = Parent "bx-table-cell-skeleton" "<bx-table-cell-skeleton" "</bx-table-cell-skeleton>"
+ 
+bxTableExpandRow :: Html -> Html
+bxTableExpandRow = Parent "bx-table-expand-row" "<bx-table-expand-row" "</bx-table-expand-row>"
+ 
+bxTableExpandedRow :: Html -> Html
+bxTableExpandedRow = Parent "bx-table-expanded-row" "<bx-table-expanded-row" "</bx-table-expanded-row>"
+ 
 bxTableHead :: Html -> Html
 bxTableHead = Parent "bx-table-head" "<bx-table-head" "</bx-table-head>"
+ 
+bxTableHeaderExpandRow :: Html -> Html
+bxTableHeaderExpandRow = Parent "bx-table-header-expand-row" "<bx-table-header-expand-row" "</bx-table-header-expand-row>"
  
 bxTableHeaderRow :: Html -> Html
 bxTableHeaderRow = Parent "bx-table-header-row" "<bx-table-header-row" "</bx-table-header-row>"
@@ -59,20 +83,14 @@ bxTableHeaderRow = Parent "bx-table-header-row" "<bx-table-header-row" "</bx-tab
 bxTableHeaderCell :: Html -> Html
 bxTableHeaderCell = Parent "bx-table-header-cell" "<bx-table-header-cell" "</bx-table-header-cell>"
  
-bxTableBody :: Html -> Html
-bxTableBody = Parent "bx-table-body" "<bx-table-body" "</bx-table-body>"
+bxTableHeaderCellSkeleton :: Html -> Html
+bxTableHeaderCellSkeleton = Parent "bx-table-header-cell-skeleton" "<bx-table-header-cell-skeleton" "</bx-table-header-cell-skeleton>"
  
 bxTableRow :: Html -> Html
 bxTableRow = Parent "bx-table-row" "<bx-table-row" "</bx-table-row>"
  
-bxTableCell :: Html -> Html
-bxTableCell = Parent "bx-table-cell" "<bx-table-cell" "</bx-table-cell>"
- 
 bxTableToolbar :: Html -> Html
 bxTableToolbar = Parent "bx-table-toolbar" "<bx-table-toolbar" "</bx-table-toolbar>"
- 
-bxTableBatchActions :: Html -> Html
-bxTableBatchActions = Parent "bx-table-batch-actions" "<bx-table-batch-actions" "</bx-table-batch-actions>"
  
 bxTableToolbarContent :: Html -> Html
 bxTableToolbarContent = Parent "bx-table-toolbar-content" "<bx-table-toolbar-content" "</bx-table-toolbar-content>"
@@ -86,11 +104,17 @@ bxDatePicker = Parent "bx-date-picker" "<bx-date-picker" "</bx-date-picker>"
 bxDatePickerInput :: Html -> Html
 bxDatePickerInput = Parent "bx-date-picker-input" "<bx-date-picker-input" "</bx-date-picker-input>"
  
+bxDatePickerInputSkeleton :: Html -> Html
+bxDatePickerInputSkeleton = Parent "bx-date-picker-input-skeleton" "<bx-date-picker-input-skeleton" "</bx-date-picker-input-skeleton>"
+ 
 bxDropdown :: Html -> Html
 bxDropdown = Parent "bx-dropdown" "<bx-dropdown" "</bx-dropdown>"
  
 bxDropdownItem :: Html -> Html
 bxDropdownItem = Parent "bx-dropdown-item" "<bx-dropdown-item" "</bx-dropdown-item>"
+ 
+bxDropdownSkeleton :: Html -> Html
+bxDropdownSkeleton = Parent "bx-dropdown-skeleton" "<bx-dropdown-skeleton" "</bx-dropdown-skeleton>"
  
 bxFileUploader :: Html -> Html
 bxFileUploader = Parent "bx-file-uploader" "<bx-file-uploader" "</bx-file-uploader>"
@@ -161,6 +185,9 @@ bxToastNotification = Parent "bx-toast-notification" "<bx-toast-notification" "<
 bxNumberInput :: Html -> Html
 bxNumberInput = Parent "bx-number-input" "<bx-number-input" "</bx-number-input>"
  
+bxNumberInputSkeleton :: Html -> Html
+bxNumberInputSkeleton = Parent "bx-number-input-skeleton" "<bx-number-input-skeleton" "</bx-number-input-skeleton>"
+ 
 bxOverflowMenu :: Html -> Html
 bxOverflowMenu = Parent "bx-overflow-menu" "<bx-overflow-menu" "</bx-overflow-menu>"
  
@@ -182,17 +209,29 @@ bxPagesSelect = Parent "bx-pages-select" "<bx-pages-select" "</bx-pages-select>"
 bxProgressIndicator :: Html -> Html
 bxProgressIndicator = Parent "bx-progress-indicator" "<bx-progress-indicator" "</bx-progress-indicator>"
  
+bxProgressIndicatorSkeleton :: Html -> Html
+bxProgressIndicatorSkeleton = Parent "bx-progress-indicator-skeleton" "<bx-progress-indicator-skeleton" "</bx-progress-indicator-skeleton>"
+ 
 bxProgressStep :: Html -> Html
 bxProgressStep = Parent "bx-progress-step" "<bx-progress-step" "</bx-progress-step>"
  
+bxProgressStepSkeleton :: Html -> Html
+bxProgressStepSkeleton = Parent "bx-progress-step-skeleton" "<bx-progress-step-skeleton" "</bx-progress-step-skeleton>"
+ 
 bxRadioButton :: Html -> Html
 bxRadioButton = Parent "bx-radio-button" "<bx-radio-button" "</bx-radio-button>"
+ 
+bxRadioButtonSkeleton :: Html -> Html
+bxRadioButtonSkeleton = Parent "bx-radio-button-skeleton" "<bx-radio-button-skeleton" "</bx-radio-button-skeleton>"
  
 bxRadioButtonGroup :: Html -> Html
 bxRadioButtonGroup = Parent "bx-radio-button-group" "<bx-radio-button-group" "</bx-radio-button-group>"
  
 bxSearch :: Html -> Html
 bxSearch = Parent "bx-search" "<bx-search" "</bx-search>"
+ 
+bxSearchSkeleton :: Html -> Html
+bxSearchSkeleton = Parent "bx-search-skeleton" "<bx-search-skeleton" "</bx-search-skeleton>"
  
 bxSelect :: Html -> Html
 bxSelect = Parent "bx-select" "<bx-select" "</bx-select>"
@@ -214,6 +253,9 @@ bxSkipToContent = Parent "bx-skip-to-content" "<bx-skip-to-content" "</bx-skip-t
  
 bxSlider :: Html -> Html
 bxSlider = Parent "bx-slider" "<bx-slider" "</bx-slider>"
+ 
+bxSliderSkeleton :: Html -> Html
+bxSliderSkeleton = Parent "bx-slider-skeleton" "<bx-slider-skeleton" "</bx-slider-skeleton>"
  
 bxSliderInput :: Html -> Html
 bxSliderInput = Parent "bx-slider-input" "<bx-slider-input" "</bx-slider-input>"
@@ -242,8 +284,14 @@ bxStructuredListCell = Parent "bx-structured-list-cell" "<bx-structured-list-cel
 bxTabs :: Html -> Html
 bxTabs = Parent "bx-tabs" "<bx-tabs" "</bx-tabs>"
  
+bxTabsSkeleton :: Html -> Html
+bxTabsSkeleton = Parent "bx-tabs-skeleton" "<bx-tabs-skeleton" "</bx-tabs-skeleton>"
+ 
 bxTab :: Html -> Html
 bxTab = Parent "bx-tab" "<bx-tab" "</bx-tab>"
+ 
+bxTabSkeleton :: Html -> Html
+bxTabSkeleton = Parent "bx-tab-skeleton" "<bx-tab-skeleton" "</bx-tab-skeleton>"
  
 bxTag :: Html -> Html
 bxTag = Parent "bx-tag" "<bx-tag" "</bx-tag>"
@@ -253,6 +301,9 @@ bxFilterTag = Parent "bx-filter-tag" "<bx-filter-tag" "</bx-filter-tag>"
  
 bxTextarea :: Html -> Html
 bxTextarea = Parent "bx-textarea" "<bx-textarea" "</bx-textarea>"
+ 
+bxTextareaSkeleton :: Html -> Html
+bxTextareaSkeleton = Parent "bx-textarea-skeleton" "<bx-textarea-skeleton" "</bx-textarea-skeleton>"
  
 bxTile :: Html -> Html
 bxTile = Parent "bx-tile" "<bx-tile" "</bx-tile>"
@@ -325,4 +376,289 @@ bxSideNavLink = Parent "bx-side-nav-link" "<bx-side-nav-link" "</bx-side-nav-lin
  
 bxSideNavItems :: Html -> Html
 bxSideNavItems = Parent "bx-side-nav-items" "<bx-side-nav-items" "</bx-side-nav-items>"
+ 
+active :: AttributeValue -> Attribute
+active = attribute "active" " active=\""
+ 
+alignment :: AttributeValue -> Attribute
+alignment = attribute "alignment" " alignment=\""
+ 
+atLastPage :: AttributeValue -> Attribute
+atLastPage = attribute "at-last-page" " at-last-page=\""
+ 
+bodyText :: AttributeValue -> Attribute
+bodyText = attribute "body-text" " body-text=\""
+ 
+buttonAssistiveText :: AttributeValue -> Attribute
+buttonAssistiveText = attribute "button-assistive-text" " button-assistive-text=\""
+ 
+buttonLabelActive :: AttributeValue -> Attribute
+buttonLabelActive = attribute "button-label-active" " button-label-active=\""
+ 
+buttonLabelInactive :: AttributeValue -> Attribute
+buttonLabelInactive = attribute "button-label-inactive" " button-label-inactive=\""
+ 
+checkedText :: AttributeValue -> Attribute
+checkedText = attribute "checked-text" " checked-text=\""
+ 
+checkmarkLabel :: AttributeValue -> Attribute
+checkmarkLabel = attribute "checkmark-label" " checkmark-label=\""
+ 
+clearSelectionLabel :: AttributeValue -> Attribute
+clearSelectionLabel = attribute "clear-selection-label" " clear-selection-label=\""
+ 
+closeButtonAssistiveText :: AttributeValue -> Attribute
+closeButtonAssistiveText = attribute "close-button-assistive-text" " close-button-assistive-text=\""
+ 
+closeButtonLabel :: AttributeValue -> Attribute
+closeButtonLabel = attribute "close-button-label" " close-button-label=\""
+ 
+codeAssistiveText :: AttributeValue -> Attribute
+codeAssistiveText = attribute "code-assistive-text" " code-assistive-text=\""
+ 
+collapseButtonText :: AttributeValue -> Attribute
+collapseButtonText = attribute "collapse-button-text" " collapse-button-text=\""
+ 
+collapseMode :: AttributeValue -> Attribute
+collapseMode = attribute "collapse-mode" " collapse-mode=\""
+ 
+colorScheme :: AttributeValue -> Attribute
+colorScheme = attribute "color-scheme" " color-scheme=\""
+ 
+containerClass :: AttributeValue -> Attribute
+containerClass = attribute "container-class" " container-class=\""
+ 
+copyButtonAssistiveText :: AttributeValue -> Attribute
+copyButtonAssistiveText = attribute "copy-button-assistive-text" " copy-button-assistive-text=\""
+ 
+copyButtonFeedbackText :: AttributeValue -> Attribute
+copyButtonFeedbackText = attribute "copy-button-feedback-text" " copy-button-feedback-text=\""
+ 
+copyButtonFeedbackTimeout :: AttributeValue -> Attribute
+copyButtonFeedbackTimeout = attribute "copy-button-feedback-timeout" " copy-button-feedback-timeout=\""
+ 
+danger :: AttributeValue -> Attribute
+danger = attribute "danger" " danger=\""
+ 
+dateFormat :: AttributeValue -> Attribute
+dateFormat = attribute "date-format" " date-format=\""
+ 
+decrementButtonAssistiveText :: AttributeValue -> Attribute
+decrementButtonAssistiveText = attribute "decrement-button-assistive-text" " decrement-button-assistive-text=\""
+ 
+deleteAssistiveText :: AttributeValue -> Attribute
+deleteAssistiveText = attribute "delete-assistive-text" " delete-assistive-text=\""
+ 
+direction :: AttributeValue -> Attribute
+direction = attribute "direction" " direction=\""
+ 
+enabledRange :: AttributeValue -> Attribute
+enabledRange = attribute "enabled-range" " enabled-range=\""
+ 
+expandButtonText :: AttributeValue -> Attribute
+expandButtonText = attribute "expand-button-text" " expand-button-text=\""
+ 
+expanded :: AttributeValue -> Attribute
+expanded = attribute "expanded" " expanded=\""
+ 
+feedbackText :: AttributeValue -> Attribute
+feedbackText = attribute "feedback-text" " feedback-text=\""
+ 
+feedbackTimeout :: AttributeValue -> Attribute
+feedbackTimeout = attribute "feedback-timeout" " feedback-timeout=\""
+ 
+forceCollapsed :: AttributeValue -> Attribute
+forceCollapsed = attribute "force-collapsed" " force-collapsed=\""
+ 
+hasBatchActions :: AttributeValue -> Attribute
+hasBatchActions = attribute "has-batch-actions" " has-batch-actions=\""
+ 
+helperText :: AttributeValue -> Attribute
+helperText = attribute "helper-text" " helper-text=\""
+ 
+hideCloseButton :: AttributeValue -> Attribute
+hideCloseButton = attribute "hide-close-button" " hide-close-button=\""
+ 
+hideDivider :: AttributeValue -> Attribute
+hideDivider = attribute "hide-divider" " hide-divider=\""
+ 
+hideLabel :: AttributeValue -> Attribute
+hideLabel = attribute "hide-label" " hide-label=\""
+ 
+highlighted :: AttributeValue -> Attribute
+highlighted = attribute "highlighted" " highlighted=\""
+ 
+iconLabel :: AttributeValue -> Attribute
+iconLabel = attribute "icon-label" " icon-label=\""
+ 
+iconLayout :: AttributeValue -> Attribute
+iconLayout = attribute "icon-layout" " icon-layout=\""
+ 
+inFocus :: AttributeValue -> Attribute
+inFocus = attribute "in-focus" " in-focus=\""
+ 
+inactive :: AttributeValue -> Attribute
+inactive = attribute "inactive" " inactive=\""
+ 
+incrementButtonAssistiveText :: AttributeValue -> Attribute
+incrementButtonAssistiveText = attribute "increment-button-assistive-text" " increment-button-assistive-text=\""
+ 
+indeterminate :: AttributeValue -> Attribute
+indeterminate = attribute "indeterminate" " indeterminate=\""
+ 
+inputLabel :: AttributeValue -> Attribute
+inputLabel = attribute "input-label" " input-label=\""
+ 
+invalid :: AttributeValue -> Attribute
+invalid = attribute "invalid" " invalid=\""
+ 
+kind :: AttributeValue -> Attribute
+kind = attribute "kind" " kind=\""
+ 
+labelPosition :: AttributeValue -> Attribute
+labelPosition = attribute "label-position" " label-position=\""
+ 
+labelText :: AttributeValue -> Attribute
+labelText = attribute "label-text" " label-text=\""
+ 
+linkAssistiveText :: AttributeValue -> Attribute
+linkAssistiveText = attribute "link-assistive-text" " link-assistive-text=\""
+ 
+linkRole :: AttributeValue -> Attribute
+linkRole = attribute "link-role" " link-role=\""
+ 
+menuBarLabel :: AttributeValue -> Attribute
+menuBarLabel = attribute "menu-bar-label" " menu-bar-label=\""
+ 
+menuLabel :: AttributeValue -> Attribute
+menuLabel = attribute "menu-label" " menu-label=\""
+ 
+mobile :: AttributeValue -> Attribute
+mobile = attribute "mobile" " mobile=\""
+ 
+nextButtonText :: AttributeValue -> Attribute
+nextButtonText = attribute "next-button-text" " next-button-text=\""
+ 
+nested :: AttributeValue -> Attribute
+nested = attribute "nested" " nested=\""
+ 
+odd :: AttributeValue -> Attribute
+odd = attribute "odd" " odd=\""
+ 
+orientation :: AttributeValue -> Attribute
+orientation = attribute "orientation" " orientation=\""
+ 
+pageSize :: AttributeValue -> Attribute
+pageSize = attribute "page-size" " page-size=\""
+ 
+pageSizeLabelText :: AttributeValue -> Attribute
+pageSizeLabelText = attribute "page-size-label-text" " page-size-label-text=\""
+ 
+prefix :: AttributeValue -> Attribute
+prefix = attribute "prefix" " prefix=\""
+ 
+prevButtonText :: AttributeValue -> Attribute
+prevButtonText = attribute "prev-button-text" " prev-button-text=\""
+ 
+requiredValidityMessage :: AttributeValue -> Attribute
+requiredValidityMessage = attribute "required-validity-message" " required-validity-message=\""
+ 
+secondaryLabelText :: AttributeValue -> Attribute
+secondaryLabelText = attribute "secondary-label-text" " secondary-label-text=\""
+ 
+selectedRowsCount :: AttributeValue -> Attribute
+selectedRowsCount = attribute "selected-rows-count" " selected-rows-count=\""
+ 
+selectingItemsAssistiveText :: AttributeValue -> Attribute
+selectingItemsAssistiveText = attribute "selecting-items-assistive-text" " selecting-items-assistive-text=\""
+ 
+selectedItemAssistiveText :: AttributeValue -> Attribute
+selectedItemAssistiveText = attribute "selected-item-assistive-text" " selected-item-assistive-text=\""
+ 
+selectionIconTitle :: AttributeValue -> Attribute
+selectionIconTitle = attribute "selection-icon-title" " selection-icon-title=\""
+ 
+selectionLabel :: AttributeValue -> Attribute
+selectionLabel = attribute "selection-label" " selection-label=\""
+ 
+selectionName :: AttributeValue -> Attribute
+selectionName = attribute "selection-name" " selection-name=\""
+ 
+selectionValue :: AttributeValue -> Attribute
+selectionValue = attribute "selection-value" " selection-value=\""
+ 
+sizeHorizontal :: AttributeValue -> Attribute
+sizeHorizontal = attribute "size-horizontal" " size-horizontal=\""
+ 
+slot :: AttributeValue -> Attribute
+slot = attribute "slot" " slot=\""
+ 
+sort :: AttributeValue -> Attribute
+sort = attribute "sort" " sort=\""
+ 
+sortActive :: AttributeValue -> Attribute
+sortActive = attribute "sort-active" " sort-active=\""
+ 
+sortCycle :: AttributeValue -> Attribute
+sortCycle = attribute "sort-cycle" " sort-cycle=\""
+ 
+sortDirection :: AttributeValue -> Attribute
+sortDirection = attribute "sort-direction" " sort-direction=\""
+ 
+state :: AttributeValue -> Attribute
+state = attribute "state" " state=\""
+ 
+status :: AttributeValue -> Attribute
+status = attribute "status" " status=\""
+ 
+subtitle :: AttributeValue -> Attribute
+subtitle = attribute "subtitle" " subtitle=\""
+ 
+timeout :: AttributeValue -> Attribute
+timeout = attribute "timeout" " timeout=\""
+ 
+titleText :: AttributeValue -> Attribute
+titleText = attribute "title-text" " title-text=\""
+ 
+toggleLabelClosed :: AttributeValue -> Attribute
+toggleLabelClosed = attribute "toggle-label-closed" " toggle-label-closed=\""
+ 
+toggleLabelOpen :: AttributeValue -> Attribute
+toggleLabelOpen = attribute "toggle-label-open" " toggle-label-open=\""
+ 
+total :: AttributeValue -> Attribute
+total = attribute "total" " total=\""
+ 
+triggerContent :: AttributeValue -> Attribute
+triggerContent = attribute "trigger-content" " trigger-content=\""
+ 
+uncheckedText :: AttributeValue -> Attribute
+uncheckedText = attribute "unchecked-text" " unchecked-text=\""
+ 
+unselectedItemAssistiveText :: AttributeValue -> Attribute
+unselectedItemAssistiveText = attribute "unselected-item-assistive-text" " unselected-item-assistive-text=\""
+ 
+unselectedAllAssistiveText :: AttributeValue -> Attribute
+unselectedAllAssistiveText = attribute "unselected-all-assistive-text" " unselected-all-assistive-text=\""
+ 
+uploadingAssistiveText :: AttributeValue -> Attribute
+uploadingAssistiveText = attribute "uploading-assistive-text" " uploading-assistive-text=\""
+ 
+uploadedAssistiveText :: AttributeValue -> Attribute
+uploadedAssistiveText = attribute "uploaded-assistive-text" " uploaded-assistive-text=\""
+ 
+usageMode :: AttributeValue -> Attribute
+usageMode = attribute "usage-mode" " usage-mode=\""
+ 
+validityMessage :: AttributeValue -> Attribute
+validityMessage = attribute "validity-message" " validity-message=\""
+ 
+validityMessageMin :: AttributeValue -> Attribute
+validityMessageMin = attribute "validity-message-min" " validity-message-min=\""
+ 
+validityMessageMax :: AttributeValue -> Attribute
+validityMessageMax = attribute "validity-message-max" " validity-message-max=\""
+ 
+vertical :: AttributeValue -> Attribute
+vertical = attribute "vertical" " vertical=\""
  

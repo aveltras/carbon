@@ -12,7 +12,6 @@ import Data.Maybe (catMaybes)
 import Data.Text
 import Lib
 import Lucid
-import Lucid.Base
 import Lucid.Carbon
 import qualified Lucid.Svg as S
 
@@ -38,16 +37,16 @@ template cssFile jsFile =
         $ do
           bxHeader $ do
             bxHeaderMenuButton mempty
-            bxHeaderName [makeAttribute "prefix" "Carbon"] "Components"
+            bxHeaderName [prefix_ "Carbon"] "Components"
             bxHeaderNav $ do
               bxHeaderNavItem "Link1"
               bxHeaderNavItem "Link2"
               bxHeaderNavItem "Link3"
-              bxHeaderMenu [makeAttribute "menu-label" "label", makeAttribute "trigger-content" "label"] $ do
+              bxHeaderMenu [menuLabel_ "label", triggerContent_ "label"] $ do
                 bxHeaderMenuItem "Link1"
                 bxHeaderMenuItem "Link2"
                 bxHeaderMenuItem "Link3"
-          bxSideNav [makeAttribute "collapse-mode" "responsive"] $ do
+          bxSideNav [collapseMode_ "responsive"] $ do
             bxSideNavItems $ do
               bxSideNavLink [href_ "javascript:void(0);"] "First link"
               bxSideNavLink [href_ "javascript:void(0);"] "Second link"

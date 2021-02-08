@@ -16,3 +16,4 @@ library
   build-depends: base
                , carbon-svg
                , lucid
+               , text

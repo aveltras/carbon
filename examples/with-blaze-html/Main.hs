@@ -38,16 +38,16 @@ template cssFile jsFile =
         $ do
           bxHeader $ do
             bxHeaderMenuButton mempty
-            bxHeaderName "Components"
+            bxHeaderName ! prefix "Carbon" $ "Components"
             bxHeaderNav $ do
               bxHeaderNavItem "Link1"
               bxHeaderNavItem "Link2"
               bxHeaderNavItem "Link3"
-              bxHeaderMenu $ do
+              bxHeaderMenu ! menuLabel "label" ! triggerContent "label" $ do
                 bxHeaderMenuItem "Link1"
                 bxHeaderMenuItem "Link2"
                 bxHeaderMenuItem "Link3"
-          bxSideNav $ do
+          bxSideNav ! collapseMode "responsive" $ do
             bxSideNavItems $ do
               bxSideNavLink "First link"
               bxSideNavLink "Second link"
