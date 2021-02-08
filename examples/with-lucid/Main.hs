@@ -54,31 +54,45 @@ template cssFile jsFile =
 
           main_ [class_ "bx--content bx-ce-demo-devenv--ui-shell-content"] $ do
             "Main content here"
-            bxSvg iconAccessibility32
+            bxSvg iconChargingStationFilled16
             bxSvg iconAccessibility16
             bxSvg pictogramBag
 
 bxSvg :: Monad m => Svg -> HtmlT m ()
 bxSvg Svg {..} =
   svg_
-    [ S.xmlSpace_ (pack svgNamespace),
-      S.viewBox_ (pack svgViewBox),
-      S.fill_ (pack svgFill),
-      S.width_ (pack svgWidth),
-      S.height_ (pack svgHeight)
+    [ S.xmlSpace_ svgNamespace,
+      S.viewBox_ svgViewBox,
+      S.fill_ svgFill,
+      S.width_ svgWidth,
+      S.height_ svgHeight
     ]
-    $ forM_ svgContent $ \case
-      SvgElementPath SvgPath {..} -> S.path_ [S.d_ . pack $ svgPathD]
-      SvgElementCircle SvgCircle {..} -> S.circle_ [S.cx_ . pack $ svgCircleX, S.cy_ . pack $ svgCircleY, S.r_ . pack $ svgCircleRadius]
-      SvgElementRect SvgRect {..} ->
-        S.rect_
-          ( [ S.width_ . pack $ svgRectWidth,
-              S.height_ . pack $ svgRectHeight,
-              S.x_ . pack $ svgRectX,
-              S.y_ . pack $ svgRectY
+    $ do
+      forM_ svgContent $ \case
+        SvgElementPath SvgPath {..} ->
+          S.path_
+            ( [ S.d_ svgPathD
+              ]
+                <> catMaybes
+                  [ S.fill_ <$> svgPathFill,
+                    data_ "icon-path" <$> svgPathDataIconPath
+                  ]
+            )
+        SvgElementCircle SvgCircle {..} ->
+          S.circle_
+            [ S.cx_ svgCircleX,
+              S.cy_ svgCircleY,
+              S.r_ svgCircleRadius
             ]
-              <> catMaybes
-                [ S.rx_ . pack <$> svgRectRX,
-                  S.ry_ . pack <$> svgRectRY
-                ]
-          )
+        SvgElementRect SvgRect {..} ->
+          S.rect_
+            ( [ S.width_ svgRectWidth,
+                S.height_ svgRectHeight,
+                S.x_ svgRectX,
+                S.y_ svgRectY
+              ]
+                <> catMaybes
+                  [ S.rx_ <$> svgRectRX,
+                    S.ry_ <$> svgRectRY
+                  ]
+            )

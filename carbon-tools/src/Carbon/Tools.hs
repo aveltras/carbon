@@ -15,7 +15,6 @@ import Control.Monad
 import Data.Aeson
 import qualified Data.ByteString.Lazy as BL
 import Data.Char (toUpper)
-import Data.List (intercalate)
 import Data.Text (Text, pack, unpack)
 import NeatInterpolation
 import Text.Casing
@@ -45,7 +44,7 @@ generateContent contentType moduleNameBuilder = do
 
       forM_ allSvgs $ \svgs -> do
         let singular = init moduleName
-            svgModuleName = singular <> moduleNameBuilder (svgName $ head svgs)
+            svgModuleName = singular <> moduleNameBuilder (unpack . svgName $ head svgs)
 
         writeFile (svgFile svgModuleName) $ unpack $ svgFileHeader (pack moduleName) (pack svgModuleName)
         appendFile file $ "import Carbon." <> moduleName <> "." <> svgModuleName <> " as Exports\n"
@@ -53,7 +52,7 @@ generateContent contentType moduleNameBuilder = do
 
         forM_ svgs $ \svg@Svg {..} -> do
           let singular = init moduleName
-              fnName = prefix <> svgName
+              fnName = prefix <> unpack svgName
               typeDef = fnName <> " :: Svg\n"
               bodyDef = fnName <> " = " <> show svg
           -- svgDef = "svg_ [xmlSpace_ \"" <> svgNamespace <> "\", viewBox_ \"" <> svgViewBox <> "\", fill_ \"" <> svgFill <> "\", width_ \"" <> svgWidth <> "\", height_ \"" <> svgHeight <> "\"] $ do\n"
@@ -89,11 +88,12 @@ instance FromJSON Svg where
       <*> (toString <$> attrs .: "width")
       <*> (toString <$> attrs .: "height")
       <*> descriptor .: "content"
+      <*> pure Nothing
 
-toString :: Value -> String
+toString :: Value -> Text
 toString = \case
-  Number n -> show n
-  String t -> unpack t
+  Number n -> pack . show $ n
+  String t -> t
   _ -> error "no need to handle"
 
 instance FromJSON SvgElement where
@@ -108,29 +108,14 @@ instance FromJSON SvgElement where
 instance FromJSON SvgPath where
   parseJSON = withObject "SvgPath" $ \v ->
     SvgPath <$> v .: "d"
-
-instance LucidShow SvgPath where
-  lucidShow SvgPath {..} =
-    "path_ ["
-      <> renderAttr "d" (map (\c -> if c == '\t' then ' ' else c) svgPathD)
-      <> "]"
+      <*> v .:? "fill"
+      <*> v .:? "data-icon-path"
 
 instance FromJSON SvgCircle where
   parseJSON = withObject "SvgCircle" $ \v ->
     SvgCircle <$> v .: "cx"
       <*> v .: "cy"
       <*> v .: "r"
-
-instance LucidShow SvgCircle where
-  lucidShow SvgCircle {..} =
-    "circle_ ["
-      <> intercalate
-        ", "
-        [ renderAttr "cx" svgCircleX,
-          renderAttr "cy" svgCircleX,
-          renderAttr "r" svgCircleRadius
-        ]
-      <> "]"
 
 instance FromJSON SvgRect where
   parseJSON = withObject "SvgRect" $ \v ->
@@ -140,32 +125,6 @@ instance FromJSON SvgRect where
       <*> v .: "y"
       <*> v .:? "rx"
       <*> v .:? "ry"
-
-class LucidShow a where
-  lucidShow :: a -> String
-
-instance LucidShow SvgRect where
-  lucidShow SvgRect {..} =
-    "rect_ ["
-      <> intercalate
-        ", "
-        ( filter
-            ("" ==)
-            [ renderAttr "width" svgRectWidth,
-              renderAttr "height" svgRectHeight,
-              renderAttr "x" svgRectX,
-              renderAttr "y" svgRectY,
-              renderMaybeAttr "rx" svgRectRX,
-              renderMaybeAttr "ry" svgRectRY
-            ]
-        )
-      <> "]"
-
-renderAttr :: String -> String -> String
-renderAttr key value = key <> "_ \"" <> value <> "\""
-
-renderMaybeAttr :: String -> Maybe String -> String
-renderMaybeAttr key = maybe "" (renderAttr key)
 
 cabalTemplate :: Text -> Text -> Text
 cabalTemplate packageName moduleName =

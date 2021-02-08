@@ -1,13 +1,16 @@
 module Carbon.Svg where
 
+import Data.Text (Text)
+
 data Svg = Svg
-  { svgName :: String,
-    svgNamespace :: String,
-    svgViewBox :: String,
-    svgFill :: String,
-    svgWidth :: String,
-    svgHeight :: String,
-    svgContent :: [SvgElement]
+  { svgName :: Text,
+    svgNamespace :: Text,
+    svgViewBox :: Text,
+    svgFill :: Text,
+    svgWidth :: Text,
+    svgHeight :: Text,
+    svgContent :: [SvgElement],
+    svgTitle :: Maybe Text
   }
   deriving (Show)
 
@@ -17,24 +20,26 @@ data SvgElement
   | SvgElementRect SvgRect
   deriving (Show)
 
-newtype SvgPath = SvgPath
-  { svgPathD :: String
+data SvgPath = SvgPath
+  { svgPathD :: Text,
+    svgPathFill :: Maybe Text,
+    svgPathDataIconPath :: Maybe Text
   }
   deriving (Show)
 
 data SvgCircle = SvgCircle
-  { svgCircleX :: String,
-    svgCircleY :: String,
-    svgCircleRadius :: String
+  { svgCircleX :: Text,
+    svgCircleY :: Text,
+    svgCircleRadius :: Text
   }
   deriving (Show)
 
 data SvgRect = SvgRect
-  { svgRectWidth :: String,
-    svgRectHeight :: String,
-    svgRectX :: String,
-    svgRectY :: String,
-    svgRectRX :: Maybe String,
-    svgRectRY :: Maybe String
+  { svgRectWidth :: Text,
+    svgRectHeight :: Text,
+    svgRectX :: Text,
+    svgRectY :: Text,
+    svgRectRX :: Maybe Text,
+    svgRectRY :: Maybe Text
   }
   deriving (Show)
