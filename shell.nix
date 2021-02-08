@@ -13,6 +13,7 @@
   };
 }).shellFor {
   packages = ps: with ps; [
+    carbon-blaze-html
     carbon-lucid
     carbon-svg
     carbon-tools

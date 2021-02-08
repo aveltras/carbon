@@ -1,9 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
- 
+
 module Lucid.Carbon where
 
 import Lucid.Base (Term (term))
-
 
 bxAccordion :: Term arg result => arg -> result
 bxAccordion = term "bx-accordion"

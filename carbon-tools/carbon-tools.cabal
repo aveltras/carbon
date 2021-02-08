@@ -41,4 +41,11 @@ executable lucid
   default-language: Haskell2010
   build-depends: base
                , carbon-tools
-               
+
+executable blaze
+  hs-source-dirs: bin
+  main-is: GenerateBlaze.hs
+  default-language: Haskell2010
+  build-depends: base
+               , carbon-tools
+                              

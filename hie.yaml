@@ -1,5 +1,9 @@
 cradle:
   multi:
+    - path: "./carbon-blaze-html"
+      config: { cradle: { cabal: { component: "lib:carbon-blaze-html" } } }
+    - path: "./carbon-lucid"
+      config: { cradle: { cabal: { component: "lib:carbon-lucid" } } }
     - path: "./carbon-svg"
       config: { cradle: { cabal: { component: "lib:carbon-svg" } } }
     - path: "./lucid-carbon"
@@ -8,13 +12,17 @@ cradle:
       config: { cradle: { cabal: { component: "lib:lucid-carbon-icons" } } }
     - path: "./lucid-carbon-pictograms"
       config: { cradle: { cabal: { component: "lib:lucid-carbon-pictograms" } } }
-    - path: "./lucid-carbon-tooling"
+    - path: "./carbon-tools"
       config:
         cradle:
           cabal: 
-            - path: "./lucid-carbon-tooling/src"
-              component: "lib:lucid-carbon-tooling"
-            - path: "./lucid-carbon-tooling/bin/GenerateIcons.hs"
-              component: "lucid-carbon-tooling:exe:icons"
-            - path: "./lucid-carbon-tooling/bin/GeneratePictograms.hs"
-              component: "lucid-carbon-tooling:exe:pictograms"
+            - path: "./carbon-tools/src"
+              component: "lib:carbon-tools"
+            - path: "./carbon-tools/bin/GenerateIcons.hs"
+              component: "carbon-tools:exe:icons"
+            - path: "./carbon-tools/bin/GeneratePictograms.hs"
+              component: "carbon-tools:exe:pictograms"
+            - path: "./carbon-tools/bin/GenerateLucid.hs"
+              component: "carbon-tools:exe:lucid"
+            - path: "./carbon-tools/bin/GenerateBlaze.hs"
+              component: "carbon-tools:exe:blaze"

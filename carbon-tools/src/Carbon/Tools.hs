@@ -3,7 +3,12 @@
 {-# LANGUAGE QuasiQuotes #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module Carbon.Tools where
+module Carbon.Tools
+  ( module Carbon.Tools,
+    untrimming,
+    trimming,
+  )
+where
 
 import Carbon.Svg
 import Control.Monad
@@ -189,20 +194,9 @@ svgFileHeader package name =
      import Carbon.Svg
   |]
 
-generateModule :: String -> String -> (String -> String) -> IO ()
-generateModule packageName typeDef bodyDef = do
-  let moduleFile = "../carbon-" <> packageName <> "/src/Lucid/Carbon.hs"
-
-  writeFile moduleFile $
-    unpack
-      [untrimming|{-# LANGUAGE OverloadedStrings #-}
-                 
-                module Lucid.Carbon where
-                
-                import Lucid.Base (Term (term))
-                
-                |]
-
+generateModule :: FilePath -> Text -> String -> (String -> String) -> IO ()
+generateModule moduleFile moduleFileHeader typeDef bodyDef = do
+  writeFile moduleFile $ unpack moduleFileHeader
   forM_ tags $ \tag -> do
     let funcName = pack $ toCamel . fromKebab $ tag
         funcType = pack typeDef
