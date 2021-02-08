@@ -30,9 +30,7 @@ executable lucid
                , carbon-lucid
                , carbon-icons
                , carbon-pictograms
-               , carbon-svg
                , lucid
-               , lucid-svg
                , text
 
 executable blaze-html
@@ -42,9 +40,7 @@ executable blaze-html
   build-depends: base
                , examples
                , blaze-html
-               , blaze-svg
                , carbon-blaze-html
                , carbon-icons
                , carbon-pictograms
-               , carbon-svg
                , text

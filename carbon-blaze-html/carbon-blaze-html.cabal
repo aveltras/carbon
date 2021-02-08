@@ -17,3 +17,5 @@ library
                , carbon-svg
                , blaze-html
                , blaze-markup
+               , blaze-svg
+               , text

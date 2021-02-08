@@ -78,7 +78,6 @@ instance FromJSON Svg where
       <*> (toString <$> attrs .: "width")
       <*> (toString <$> attrs .: "height")
       <*> descriptor .: "content"
-      <*> pure Nothing
 
 toString :: Value -> Text
 toString = \case

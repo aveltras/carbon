@@ -1,19 +1,13 @@
-{-# LANGUAGE LambdaCase #-}
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE RecordWildCards #-}
 
 module Main where
 
 import Carbon.Icons
 import Carbon.Pictograms
-import Carbon.Svg
-import Control.Monad
-import Data.Maybe (catMaybes)
 import Data.Text
 import Lib
 import Lucid
 import Lucid.Carbon
-import qualified Lucid.Svg as S
 
 main :: IO ()
 main = runExample $ \css js -> renderBS $ template css js
@@ -46,52 +40,13 @@ template cssFile jsFile =
                 bxHeaderMenuItem "Link1"
                 bxHeaderMenuItem "Link2"
                 bxHeaderMenuItem "Link3"
-          bxSideNav [collapseMode_ "responsive"] $ do
+          bxSideNav [collapseMode_ "responsive"] $
             bxSideNavItems $ do
               bxSideNavLink [href_ "javascript:void(0);"] "First link"
               bxSideNavLink [href_ "javascript:void(0);"] "Second link"
 
           main_ [class_ "bx--content bx-ce-demo-devenv--ui-shell-content"] $ do
             "Main content here"
-            bxSvg iconChargingStationFilled16
+            bxSvg' iconChargingStationFilled16 [] $ title_ "Icon title"
             bxSvg iconAccessibility16
             bxSvg pictogramBag
-
-bxSvg :: Monad m => Svg -> HtmlT m ()
-bxSvg Svg {..} =
-  svg_
-    [ S.xmlSpace_ svgNamespace,
-      S.viewBox_ svgViewBox,
-      S.fill_ svgFill,
-      S.width_ svgWidth,
-      S.height_ svgHeight
-    ]
-    $ do
-      forM_ svgContent $ \case
-        SvgElementPath SvgPath {..} ->
-          S.path_
-            ( [ S.d_ svgPathD
-              ]
-                <> catMaybes
-                  [ S.fill_ <$> svgPathFill,
-                    data_ "icon-path" <$> svgPathDataIconPath
-                  ]
-            )
-        SvgElementCircle SvgCircle {..} ->
-          S.circle_
-            [ S.cx_ svgCircleX,
-              S.cy_ svgCircleY,
-              S.r_ svgCircleRadius
-            ]
-        SvgElementRect SvgRect {..} ->
-          S.rect_
-            ( [ S.width_ svgRectWidth,
-                S.height_ svgRectHeight,
-                S.x_ svgRectX,
-                S.y_ svgRectY
-              ]
-                <> catMaybes
-                  [ S.rx_ <$> svgRectRX,
-                    S.ry_ <$> svgRectRY
-                  ]
-            )

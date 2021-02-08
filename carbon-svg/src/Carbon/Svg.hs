@@ -9,8 +9,7 @@ data Svg = Svg
     svgFill :: Text,
     svgWidth :: Text,
     svgHeight :: Text,
-    svgContent :: [SvgElement],
-    svgTitle :: Maybe Text
+    svgContent :: [SvgElement]
   }
   deriving (Show)
 

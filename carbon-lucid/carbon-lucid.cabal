@@ -15,5 +15,7 @@ library
                -Wno-missing-signatures
   build-depends: base
                , carbon-svg
+               , containers
                , lucid
+               , lucid-svg
                , text
